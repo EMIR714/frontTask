@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Список пользователей</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <h1 class="userList">Список пользователей</h1>
+    <div class="controlPanel">
+      <form action="">
+        <input
+          type="text"
+          id="search"
+          onkeyup="filterUsers()"
+          placeholder="Поиск по имени или email..."
+        /><i class="fa fa-search"></i>
+      </form>
+    </div>
+    <div class="controlPanel">
+      <button onclick="loadUsers()" class="btn">
+        Обновить список пользователей
+      </button>
+    </div>
+    <div class="controlPanel">
+      <div class="table-container">
+        <table id="users"></table>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
